@@ -1,0 +1,7 @@
+{
+  "name": "cocktailgen",
+  "compatibility_date": "2025-06-20",
+  "assets": {
+    "directory": "build" // Points to your React build output
+  }
+}
