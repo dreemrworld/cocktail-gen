@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cocktail AI</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #f8fafc;
+      color: #1f2937;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    
+    .container {
+      width: 100%;
+      max-width: 800px;
+      background-color: white;
+      border-radius: 1rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+    
+    .title {
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      font-weight: 800;
+    }
+    
+    .cocktail-gradient {
+      background-image: linear-gradient(to right, #4299E1, #2B6CB0);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    
+    .badge {
+      background-color: #dbeafe;
+      color: #1e40af;
+      font-size: 1.5rem;
+      font-weight: 600;
+      padding: 0.125rem 0.625rem;
+      border-radius: 0.125rem;
+      margin-left: 0.5rem;
+    }
+    
+    .subtitle {
+      text-align: center;
+      color: #4b5563;
+      font-size: 1.125rem;
+      margin-bottom: 2rem;
+    }
+    
+    .search-container {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    
+    .search-input {
+      flex: 1;
+      padding: 1rem;
+      font-size: 1.125rem;
+      border: 1px solid #e5e7eb;
+      border-radius: 0.5rem;
+      color: #4b5563;
+    }
+    
+    .search-input:focus {
+      outline: none;
+      border-color: #3b82f6;
+      box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.3);
+    }
+    
+    .buttons-container {
+      display: flex;
+      gap: 1rem;
+    }
+    
+    .search-button {
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      min-width: 120px;
+    }
+    
+    .search-button:hover {
+      background-color: #2563eb;
+    }
+    
+    .lucky-button {
+      background-color: #10b981;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.2s;
+      min-width: 180px;
+    }
+    
+    .lucky-button:hover {
+      background-color: #059669;
+    }
+    
+    .instructions {
+      margin-top: 2rem;
+      padding: 1.5rem;
+      background-color: #f9fafb;
+      border-radius: 0.5rem;
+      text-align: center;
+      color: #6b7280;
+      line-height: 1.5;
+    }
+    
+    .footer {
+      margin-top: 2rem;
+      text-align: center;
+      color: #6b7280;
+      font-size: 0.875rem;
+    }
+    
+    .footer a {
+      color: #3b82f6;
+      text-decoration: none;
+    }
+    
+    .footer a:hover {
+      text-decoration: underline;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+      .container {
+        padding: 1.5rem;
+      }
+      
+      .title {
+        font-size: 2rem;
+      }
+      
+      .badge {
+        font-size: 1.25rem;
+      }
+      
+      .search-container {
+        flex-direction: column;
+      }
+      
+      .search-input {
+        width: 100%;
+      }
+      
+      .buttons-container {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      .buttons-container {
+        flex-direction: column;
+      }
+      
+      .search-button, .lucky-button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">
+      <span class="cocktail-gradient">Cocktail</span>
+      <span class="badge">AI</span>
+    </h1>
+    <p class="subtitle">Discover your next favorite drink!</p>
+    
+    <div class="search-container">
+      <input 
+        type="text" 
+        class="search-input" 
+        placeholder="Search for a cocktail or ingredient..."
+      >
+      <button class="search-button">Search</button>
+      <button class="lucky-button">I'm Feeling Lucky 🍹</button>
+    </div>
+    
+    <div class="instructions">
+      <p>Type a cocktail name or ingredient and click 'Search', or click 'I'm Feeling Lucky' for a random cocktail.</p>
+    </div>
+  </div>
+  
+  <footer class="footer">
+    <p>Created by <a href="https://www.goat.africa" target="_blank" rel="noopener noreferrer">Carlos Araújo</a></p>
+  </footer>
+</body>
+</html>
